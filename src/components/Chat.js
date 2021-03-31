@@ -5,6 +5,7 @@ import {get} from "lodash";
 
 function Chat(props) {
     const userName = get(props, 'user', 'Ivan Ganzales');
+
     const setCurRoom = (roomNum)=>{
         console.log('current room changed for', roomNum );
         setCurrentRoom(roomNum);
@@ -29,7 +30,7 @@ function Chat(props) {
 
 return(
     <div className="chat">
-        <div className="right"><Right user = {userName} rooms = {responseJson} setCurrentRoom = {setCurRoom}/></div>
+        <div className="right"><Right user = {userName} rooms = {responseJson} setCurRoom = {setCurRoom}/></div>
         <div className="left"><Left user = {userName} currentRoom={currentRoom}/></div>
 
     </div>

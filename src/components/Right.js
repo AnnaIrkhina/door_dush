@@ -11,11 +11,11 @@ function Right(props) {
     return (
         <div>
             <div>
-                <h2>{userName}</h2><small>online 12 minutes</small>
+                <h3>{userName}</h3><small>online 12 minutes</small>
             </div>
             <ul>
                 {
-                    rooms.map(room => (<Room room={room} setCurrentRoom = {props.setCurrentRoom}/>
+                    rooms.map(room => (<Room room={room} setCurRoom = {props.setCurRoom}/>
                     ))}
             </ul>
         </div>

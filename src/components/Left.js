@@ -8,7 +8,7 @@ function Left(props) {
             .then(response => response.json())
             .then(json => {
                 setResponseJson(json);
-                if(json.length) props.setCurrentRoom(json[0].id);
+
                 console.log("left!!!!!!!!!!!!!!", json);
             })
             .catch(e=>console.log("errrr!!!!!!!!!!!!!!", e))
@@ -18,7 +18,16 @@ function Left(props) {
     }, [props.currentRoom]);
 
     return(
-        <div>{props.user}</div>
+        <div>
+            <div><h2>{responseJson.name}</h2></div>
+            <div>
+                <span className="currentUser">
+                    {props.user+' '}
+                </span>
+                { responseJson.users.map(user=>(
+                    <span className="user"> {user}  </span>))}
+            </div>
+        </div>
     )
 }
 export default Left;
