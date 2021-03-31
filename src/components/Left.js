@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {get} from "lodash";
 import RoomTop from "./RoomTop";
 import Messages from "./Messages";
+import MessageInput from "./MessageInput";
 
 function Left(props) {
     const userName = get(props, 'user', 'Ivan Ganzales');

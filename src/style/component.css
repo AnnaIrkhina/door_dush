@@ -106,19 +106,18 @@ small{
     border-bottom-width: 2px;
     border-top-style: solid;
     border-top-width: 2px;
-
+    min-height: 100%;
 }
+
+
 .message{
-    width: 300px;
+    width: 350px;
     margin: 5px auto;
     background: #ffffff;
     padding: 10px;
     text-align: center;
     color: #7c7b7b;
-
     border-radius: 20px;
-    position: relative;
-    right: 300px;
 
 }
 .message_user_name{
@@ -126,12 +125,18 @@ small{
     margin: 5px auto;
     padding: 5px;
     text-align: center;
-
-
-    position: relative;
     right: 300px;
-      color: #7c7b7b;
+    color: #7c7b7b;
     text-align: left;
-    position: relative;
-    right: 300px1
+
+}
+.message_input{
+    background-color: #61dafb;
+    display: flex;
+    position: fixed;
+    height: 150px;
+
+    bottom: 0;
+
+    height: 2.5rem;            /* Footer height */
 }
