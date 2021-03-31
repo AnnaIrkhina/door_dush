@@ -7,7 +7,7 @@ function RoomTop(props) {
     const users = get(props, 'users', []);
 
     return(
-        <div>
+        <div className="room_top">
             <div className="roomName">{roomName}</div>
             <div>
                 <span className="currentUser">

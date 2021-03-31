@@ -10,9 +10,10 @@ function Right(props) {
     console.log("right", rooms)
     return (
         <div>
-            <div>
-                <h3>{userName}</h3><small>online 12 minutes</small>
+            <div className="right_user">
+                {userName}
             </div>
+            <small>online 12 minutes</small>
             <ul>
                 {
                     rooms.map(room => (<Room room={room} setCurRoom = {props.setCurRoom}/>

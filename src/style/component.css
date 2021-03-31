@@ -89,9 +89,13 @@ small{
 .user{
     color: #4e4e4e;
 }
-.right user{
+.right_user{
 
     padding: 16px 16px 20px;
-    font-size: 18px;
+    font-size: 20px;
+
+}
+.room_top{
+    height: 100px;
 
 }
