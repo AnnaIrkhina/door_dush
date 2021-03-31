@@ -32,9 +32,9 @@ function MessageInput(props) {
     }
 
     return (
-        <div >
+        <div  >
             <input  className="" onChange={(e)=>{setMessage(e.target.value)}}/>
-            <button className="" disabled = {message.length === 0} onClick={sendMessage}>Send</button>
+            <button className="message_send_btn" disabled = {message.length === 0} onClick={sendMessage}>Send</button>
 
         </div>
     )

@@ -107,6 +107,7 @@ small{
     border-top-style: solid;
     border-top-width: 2px;
     min-height: 100%;
+
 }
 
 
@@ -119,6 +120,7 @@ small{
     color: #7c7b7b;
     border-radius: 20px;
 
+
 }
 .message_of_user{
     width: 350px;
@@ -128,6 +130,7 @@ small{
     text-align: center;
     color: whitesmoke;
     border-radius: 20px;
+
 }
 .message_user_name{
     width: 300px;
@@ -143,9 +146,12 @@ small{
     background-color: #61dafb;
     display: flex;
     position: fixed;
-    height: 150px;
-
+    right: -200px;
+    height: 100px;
     bottom: 0;
+    width: 100%;
+                /* Footer height */
+}
+.message_send_btn{
 
-    height: 2.5rem;            /* Footer height */
 }
