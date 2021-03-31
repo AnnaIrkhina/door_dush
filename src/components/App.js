@@ -17,7 +17,7 @@ function App() {
         <Router>
 
             <Switch>
-                <Route exact path="/" children={<Home setUserName = {setUseName} user = {userName}/>}/>
+                <Route exact path="/" children={<Home setUserName = {setUseName} userName = {userName}/>}/>
                 <Route path="/chat" children={<Chat user={userName}/>}/>
             </Switch>
         </Router>

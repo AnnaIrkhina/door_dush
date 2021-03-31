@@ -28,8 +28,11 @@ function Left(props) {
                 userName = {userName}
                 users = {responseJsonRoomInfo.users}
                 roomName = {responseJsonRoomInfo.name}/>
-            <Messages currentRoom = {props.currentRoom}/>
-            <MessageInput />
+            <Messages
+                currentRoom = {props.currentRoom}/>
+            <MessageInput
+                currentRoom = {props.currentRoom}
+                userName = {userName}/>
         </div>
     )
 }

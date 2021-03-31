@@ -1,12 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
+import {get} from "lodash"
 
 
-function MessageInput() {
+function MessageInput(props) {
+    const [message, setMessage] = useState("")
+    const userName = get(props, 'userName', '');
+    const currentRoom = get(props, 'currentRoom', 0);
+    const data = {name: userName, message: message}
+
+    const sendMessage = ()=>{
+
+        const SEND_MESSAGE_API_URL = 'http://localhost:8080/api/rooms/'+currentRoom+'/messages';
+        fetch(
+            SEND_MESSAGE_API_URL, {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
 
     return (
         <div >
-            <input  className=""/>
-            <button className="">Send</button>
+            <input  className="" onChange={(e)=>{setMessage(e.target.value)}}/>
+            <button className="" disabled = {message.length === 0} onClick={sendMessage}>Send</button>
+
         </div>
     )
 }

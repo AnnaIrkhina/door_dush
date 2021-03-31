@@ -16,7 +16,7 @@ function Messages(props) {
                 console.log(json);
 
             })
-            .catch(e => console.log("errrr!!!!!!!!!!!!!!", e))
+            .catch(e => console.log( e))
         return () => {
 
         };
