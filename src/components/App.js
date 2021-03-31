@@ -1,25 +1,27 @@
 import '../App.css';
-import React from "react";
+import React, {useState} from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+    BrowserRouter as Router,
+    Switch,
+    Route,
 } from "react-router-dom";
 import Chat from './Chat'
 import Home from './Home'
 
 function App() {
 
+    const [userName, setUseName] = useState('');
 
-  return (
-    <Router>
 
-      <Switch >
-        <Route exact path="/" children={<Home />} />
-        <Route path="/chat" children={<Chat />} />
-       </Switch>
-    </Router>
-  );
+    return (
+        <Router>
+
+            <Switch>
+                <Route exact path="/" children={<Home setUserName = {setUseName} user = {userName}/>}/>
+                <Route path="/chat" children={<Chat user={userName}/>}/>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;

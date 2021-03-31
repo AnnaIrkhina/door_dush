@@ -3,16 +3,24 @@ import '../style/component.css'
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Input, Button } from 'reactstrap';
-function Home() {
+import {Input, Button, FormControl, InputGroup} from "react-bootstrap";
+function Home(props) {
 
 
 return(
 
 
       <div className="center">
-          <Input className = "Input" placeholder="Type your user name..." onChange />
-          <Button><Link to="/chat">Join The DoorSash Chat</Link></Button>
+          <InputGroup className="mb-3">
+
+              <FormControl
+                  placeholder="Type your user name..."
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  onChange = {(e)=> props.setUserName(e.target.value)}
+              />
+          </InputGroup>
+          <Link to="/chat"><Button disabled = {props.user.length === 0}>Join The DoorSash Chat</Button></Link>
         </div>
 
 

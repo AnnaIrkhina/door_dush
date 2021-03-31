@@ -1,37 +1,82 @@
 .center {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   
     align-items: center;
     height: 300px;
   
-    border: 1px solid green; 
   }
   .Input{
     border: 1px solid rgb(66, 66, 66); 
     border-radius: 2px;
     margin: 15px;
     padding: 15px; 
-    width: 1000px;
+    width: 300px;
   }
   button{
-    background-color: rgb(243, 34, 76);
+    background-color: rgb(246, 45, 86);
     color:whitesmoke;
     border-radius: 2px;
     border-width:1px;
     border: crimson;
-    width: 100%;
+    width: 300px;
     
     margin: 15px;
     padding: 15px; 
   }
+
   
-  
-  
-  button:focus{
-    border-width:1px;
-    border:  rgb(243, 34, 76);
-    background-color: darkblue;
+button:focus{
+    border-width: 0px;
+    border:  rgb(246, 45, 86);
+    background-color: rgb(246, 45, 86);
   }
+.chat{
+    display: flex;
+    text-align: center;
+    height: 100%;
+    color: whitesmoke;
+}
+.right{
+   width: 250px;
+    background-color: rgb(250, 11, 67);
+    height: 100%;
+    position: fixed;
+    text-align: left;
+}
+
+li a {
+    display: block;
+    color: whitesmoke;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color:  #410000;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    margin-top: 30px;
+
+}
+h2{
+    padding: 16px 16px 20px;
+}
+small{
+    padding: 3px 16px 20px;
+}
+
+
+.left{
+    width: 100%;
+    height: 100%;
+    color: rgb(246, 45, 86);
+}
