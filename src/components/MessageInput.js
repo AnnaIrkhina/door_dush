@@ -7,6 +7,8 @@ function MessageInput(props) {
     const userName = get(props, 'userName', '');
     const currentRoom = get(props, 'currentRoom', 0);
     const data = {name: userName, message: message}
+    const messageNumber = get(props, 'messageNumber', 0);
+    const {setMessageNumber} = props;
 
     const sendMessage = ()=>{
 
@@ -22,6 +24,7 @@ function MessageInput(props) {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                setMessageNumber(messageNumber + 1)
             })
             .catch((error) => {
                 console.error('Error:', error);

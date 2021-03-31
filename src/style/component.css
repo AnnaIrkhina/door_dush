@@ -112,13 +112,22 @@ small{
 
 .message{
     width: 350px;
-    margin: 5px auto;
+    margin: 15px auto;
     background: #ffffff;
     padding: 10px;
     text-align: center;
     color: #7c7b7b;
     border-radius: 20px;
 
+}
+.message_of_user{
+    width: 350px;
+    margin: 15px auto;
+    background: rgb(246, 45, 86);
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 20px;
 }
 .message_user_name{
     width: 300px;

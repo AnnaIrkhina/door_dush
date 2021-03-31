@@ -7,6 +7,7 @@ import MessageInput from "./MessageInput";
 function Left(props) {
     const userName = get(props, 'user', 'Ivan Ganzales');
     const [responseJsonRoomInfo, setResponseJsonRoomInfo] = useState([])
+    const [messageNumber, setMessageNumber] = useState(0)
     const ROOM_INFO_URL = 'http://localhost:8080/api/rooms/' + props.currentRoom
 
     useEffect(() => {
@@ -27,12 +28,20 @@ function Left(props) {
             <RoomTop
                 userName = {userName}
                 users = {responseJsonRoomInfo.users}
-                roomName = {responseJsonRoomInfo.name}/>
+                roomName = {responseJsonRoomInfo.name}
+            />
             <Messages
-                currentRoom = {props.currentRoom}/>
+                userName = {userName}
+                currentRoom = {props.currentRoom}
+                messageNumber = {messageNumber}
+            />
             <MessageInput
                 currentRoom = {props.currentRoom}
-                userName = {userName}/>
+                userName = {userName}
+                setMessageNumber = {setMessageNumber}
+                messageNumber = {messageNumber}
+            />
+
         </div>
     )
 }
