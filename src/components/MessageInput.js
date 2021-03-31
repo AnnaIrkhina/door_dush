@@ -24,7 +24,8 @@ function MessageInput(props) {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                setMessageNumber(messageNumber + 1)
+                setMessageNumber(messageNumber + 1);
+                setMessage('')
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -33,7 +34,7 @@ function MessageInput(props) {
 
     return (
         <div  >
-            <input  className="" onChange={(e)=>{setMessage(e.target.value)}}/>
+            <input  value={message} placeholder="Type a message..." className="" onChange={(e)=>{setMessage(e.target.value)}}/>
             <button className="message_send_btn" disabled = {message.length === 0} onClick={sendMessage}>Send</button>
 
         </div>

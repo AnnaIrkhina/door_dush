@@ -57,6 +57,12 @@ li a:hover {
     background-color:  #410000;
     color: white;
 }
+
+li a:active {
+    background-color:  #410000;
+    color: white;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -113,6 +119,7 @@ small{
 
 .message{
     width: 350px;
+
     margin: 15px auto;
     background: #ffffff;
     padding: 10px;
